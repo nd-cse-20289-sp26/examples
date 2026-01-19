@@ -40,25 +40,25 @@ Three volunteers to role-play and demonstrate a pipeline.
 
 # Regular Expressions: Syntax
 
-        $ echo "Mayleen" | grep -E '.*'             # Match all letters
+        $ echo "Genesis" | grep -E '.*'             # Match all letters
 
-        $ echo "Mayleen" | grep -E 'e*'             # Match zero or more e's
+        $ echo "Genesis" | grep -E 'e*'             # Match zero or more e's
 
-        $ echo "Mayleen" | grep -E 'a?'             # Match zero or one a's
+        $ echo "Genesis" | grep -E 'a?'             # Match zero or one a's
 
-        $ echo "Mayleen" | grep -E 'e{2}'           # Match exactly 2 e's
+        $ echo "Genesis" | grep -E 'e{2}'           # Match exactly 2 e's
 
-        $ echo "Daniel" | grep -E '[aei]*'          # Match any a, e, i's
+        $ echo "Catherine" | grep -E '[aei]*'       # Match any a, e, i's
 
-        $ echo "Daniel" | grep -E '[aei]+'	    # Match one or more of a, e, i
+        $ echo "Catherine" | grep -E '[aei]+'	    # Match one or more of a, e, i
 
-        $ echo "Daniel" | grep -E '[^aei]+'         # Match everything but a, e, i
+        $ echo "Catherine" | grep -E '[^aei]+'      # Match everything but a, e, i
 
-        $ echo "Daniel" | grep -E '^D'              # Match start
+        $ echo "Catherine" | grep -E '^D'           # Match start
 
-        $ echo "Daniel" | grep -E 'l$'              # Match end
+        $ echo "Catherine" | grep -E 'l$'           # Match end
 
-        $ echo "Danielle" | grep -E '(e).*\1'      # Match with group references
+        $ echo "O'Connor" | grep -E '(o).*\1'       # Match with group references
 
 # Regular Expressions: Examples
 
