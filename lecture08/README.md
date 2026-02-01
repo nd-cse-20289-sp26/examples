@@ -44,19 +44,19 @@ Three volunteers to role-play and demonstrate a pipeline.
 
         $ echo "Genesis" | grep -E 'e*'             # Match zero or more e's
 
-        $ echo "Genesis" | grep -E 'a?'             # Match zero or one a's
+        $ echo "Genesis" | grep -E 'e?'             # Match zero or one a's
 
-        $ echo "Genesis" | grep -E 'e{2}'           # Match exactly 2 e's
+        $ echo "Geensis" | grep -E 'e{2}'           # Match exactly 2 e's
 
         $ echo "Catherine" | grep -E '[aei]*'       # Match any a, e, i's
 
-        $ echo "Catherine" | grep -E '[aei]+'	    # Match one or more of a, e, i
+        $ echo "Catherien" | grep -E '[aei]+'	    # Match one or more of a, e, i
 
         $ echo "Catherine" | grep -E '[^aei]+'      # Match everything but a, e, i
 
-        $ echo "Catherine" | grep -E '^D'           # Match start
+        $ echo "Catherine" | grep -E '^C'           # Match start
 
-        $ echo "Catherine" | grep -E 'l$'           # Match end
+        $ echo "Catherine" | grep -E 'e$'           # Match end
 
         $ echo "O'Connor" | grep -E '(o).*\1'       # Match with group references
 
