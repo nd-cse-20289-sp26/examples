@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+import csv
+import requests
+
+# Constants
+
+URL    = 'https://yld.me/raw/gDQD'
+POINTS = [1, 1.5, 1.5, 1, 1.5, 2.5, 2]
+MAX    = sum(POINTS)
+
+# Fetch data
+
+data   = requests.get(URL).text.splitlines()
+
+# Compute individual scores (Imperative)
+
+scores = []
+for student in csv.reader(data):
+    points = []
+    for point in student:
+        points.append(float(point))
+    scores.append(sum(points))
+
+print(scores)
+
+# Compute individual scores (Functional) - Phase I
+
+# Compute individual scores (Functional) - Phase II
+
+# Compute individual scores (List Comprehensions) - Phase I
+
+# Compute individual scores (List Comprehensions) - Phase II
+
+# Filter scores (Imperative)
+
+Bs = []
+for score in scores:                            # Discuss: high-level goal
+    if .8*MAX <= score < .9*MAX:                # Discuss: common pattern?
+        Bs.append(score)                        # Discuss: change to As?
+
+print(len(Bs))
+
+# Filter scores (Functional)
+
+# Filter scores (List Comprehensions)
