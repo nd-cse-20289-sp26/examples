@@ -48,12 +48,10 @@ def main(arguments=sys.argv[1:], stream=sys.stdin) -> None:
 
     while arguments:
         argument = arguments.pop(0)                     # Discuss: popping from queue
-        if argument == '-i':
-            ignorecase = True
-        elif argument == '-h':
-            usage(0)
-        else:
-            usage(1)
+        match argument:                                 # Discuss: match
+            case '-i': ignorecase = True
+            case '-h': usage(0)
+            case _:    usage(1)
 
     # Process standard input
     for line in stream:
