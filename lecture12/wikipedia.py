@@ -8,6 +8,7 @@ import requests
 
 # Constants
 
+HEADERS  = {'User-Agent': __name__}         
 URL      = 'https://en.wikipedia.org/w/api.php' # Discuss: APIs
 PARAMS   = {
     'action'  : 'query', 
@@ -18,8 +19,8 @@ PARAMS   = {
 
 # Main Execution
 
-def main():
-    result   = requests.get(URL, params=PARAMS) # Review: keyword arguments
+def main():                                     # Review: keyword arguments
+    result   = requests.get(URL, params=PARAMS, headers=HEADERS) 
     data     = result.json()                    # Discuss: json
 
     #pprint.pprint(data)                        # Discuss: pretty printing

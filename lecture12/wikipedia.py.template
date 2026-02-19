@@ -8,11 +8,12 @@ import requests
 
 # Constants
 
-URL      = 'https://en.wikipedia.org/w/api.php' # Discuss: APIs
+HEADERS  = {'User-Agent': __name__}
+URL      = 'https://en.wikipedia.org/w/api.php'
 PARAMS   = {
-    'action'  : 'query', 
-    'list'    : 'search', 
-    'format'  : 'json', 
+    'action'  : 'query',
+    'list'    : 'search',
+    'format'  : 'json',
     'srsearch': None,
 }
 
