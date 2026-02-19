@@ -24,9 +24,9 @@ def zipcodes(city: str, state: str) -> None:
 
     headers  = {'User-Agent': __name__}         # Discuss: requests
     response = requests.get(url, headers=headers)
+    matches  = re.findall(regex, response.text) # Discuss: re.findall
 
-                                                # Discuss: re.findall
-    for current, zipcode in re.findall(regex, response.text):
+    for current, zipcode in matches:
         if city is None or city == current:
             print(zipcode)
 
@@ -38,14 +38,11 @@ def main(arguments=sys.argv[1:]):
 
     while arguments:                            # Review: parsing arguments
         argument = arguments.pop(0)
-        if argument == '-c':
-            city  = arguments.pop(0)
-        elif argument == '-s':
-            state = arguments.pop(0)
-        elif argument == '-h':
-            usage(0)
-        else:
-            usage(1)
+        match argument:
+            case '-c': city  = arguments.pop(0)
+            case '-s': state = arguments.pop(0)
+            case '-h': usage(0)
+            case _   : usage(1)
 
     zipcodes(city, state)
 
