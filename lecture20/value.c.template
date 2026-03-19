@@ -1,0 +1,24 @@
+/* value.c */
+
+#include <limits.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+typedef union {
+    uint64_t number;	
+    char     string[6];
+} Value;
+
+void value_format(Value *v, FILE *stream) {
+    // TODO: Print out attributes in Value
+    fprintf(stream, "Value{number = %016lx, string = %s}\n", v, v);
+}
+
+void value_bytes(Value *v, FILE *stream) {
+    // TODO: Print out each byte in Value
+}
+
+int main(int argc, char *argv[]) {
+    return EXIT_SUCCESS;
+}
