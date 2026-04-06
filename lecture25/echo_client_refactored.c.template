@@ -1,0 +1,37 @@
+/* echo_client_refactored.c: simple TCP echo client (refactored) */
+
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <netdb.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+const char *HOST = "localhost";
+const char *PORT = "9416";
+
+FILE *socket_dial(const char *host, const char *port) {
+    /* Lookup server address information */
+
+    /* For each server entry, allocate socket and try to connect */
+	/* Allocate socket */
+
+	/* Connect to host */
+
+    /* Release allocate address information */
+
+    /* Open file stream from socket file descriptor */
+    return NULL;
+}
+
+int main(int argc, char *argv[]) {
+    /* Connect to remote machine */
+
+    /* Read from stdin and send to server */
+    return EXIT_SUCCESS;
+}
+
+/* vim: set expandtab sts=4 sw=4 ts=8 ft=c: */
